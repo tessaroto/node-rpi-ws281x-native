@@ -88,7 +88,8 @@ const board = new five.Board({
   io: new Raspi({ excludePins: 'GPIO18'}) // Exclude GPIO18 from raspi-io
 });
 ```
-### Raspberry PI 3 B (SPI) Compatability
+
+### Raspberry PI SPI Compatability
 For instance, if your LEDs is connected to GPIO10 of the Pi:
 
 ```js
