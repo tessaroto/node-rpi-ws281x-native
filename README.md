@@ -88,6 +88,20 @@ const board = new five.Board({
   io: new Raspi({ excludePins: 'GPIO18'}) // Exclude GPIO18 from raspi-io
 });
 ```
+### Raspberry PI 3 B (SPI) Compatability
+For instance, if your LEDs is connected to GPIO10 of the Pi:
+
+```js
+var ws281x = require('../lib/ws281x-native');
+
+var NUM_LEDS = 10;
+
+ws281x.init(NUM_LEDS, {
+  gpioPin: 10, 
+});
+
+```
+
 
 ### Index-Mapping
 
