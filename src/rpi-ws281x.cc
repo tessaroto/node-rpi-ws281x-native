@@ -121,8 +121,10 @@ void init(const Nan::FunctionCallbackInfo<v8::Value>& info) {
   // FIXME: handle errors, throw JS-Exception
   int err = ws2811_init(&ledstring);
 
+ // ws2811_get_return_t_str(err);
+
   if(err) {
-      return Nan::ThrowError("init(): initialization failed. sorry – no idea why.");
+      return Nan::ThrowError("init(): initialization failed. sorry – no idea why.aaaa");
   }
   info.GetReturnValue().SetUndefined();
 }
